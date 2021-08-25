@@ -1,0 +1,278 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <div id="navwrapper">
+  <nav id="navbar"> 
+    <div id="nav-head">
+      <header>Java Documentation</header>
+    </div>
+    <div class="link-sec">
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    </div>
+    <div class="link-sec">
+    <a class="nav-link" href="#Installing_JDK_and_a_Java_IDE">Installing JDK and a Java IDE</a>
+      </div>
+        <div class="link-sec">
+    <a class="nav-link" href="#Syntax">Syntax</a>
+          </div>
+    <div class="link-sec">
+    <a href="#Comments" class="nav-link">Comments</a>
+      </div>
+    <div class="link-sec">
+    <a href="#Variables" class="nav-link">Variables</a>
+      </div>
+    <div>
+    <a href="#Operators" class="nav-link">Operators</a>
+      </div>
+    <div class="link-sec">
+    <a href="#References" class="nav-link">References</a>
+  </nav>
+    </div>
+                  
+ <main id="main-doc">
+    <div id="sections">
+  <section class="main-section" id="Introduction"><header id="intro">Introduction</header>
+    <p>Java is an object-oriented programming language developed by James Gosling and colleagues at Sun Microsystems in the early 1990s. Unlike conventional languages which are generally designed either to be compiled to native (machine) code, or to be interpreted from source code at runtime, Java is intended to be compiled to a bytecode, which is then run (generally using JIT compilation) by a Java Virtual Machine.</p>
+  </section>
+  
+  <section class="main-section" id="Installing_JDK_and_a_Java_IDE"><header>Installing JDK and a Java IDE</header>
+    <p>In order to develop Java applications or Java APIs you need the Java Software Developer Kit (Java SDK) installed. You can find the differents Java SDKs here:</p>
+    <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Software Developer Kit (Java SDK)</a>
+    <p>If you plan to be working more seriously with Java, I would recommend that you install a Java IDE (Integrated Development Environment). An IDE contains both a code editor with syntax highlighting, code completion, code generation, often with version control system integration and more. An IDE also makes it easy to compile and run your Java code, all from within the IDE.</p>
+   <p> Here are the three most popular Java IDEs:
+    <ul>
+      <li><a href="https://www.eclipse.org/">Eclipse</a></li>
+      <li><a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a></li>
+      <li><a href="https://netbeans.apache.org//">NetBeans</a></li>
+    </ul>
+    </p>
+  </section>
+  
+  <section class="main-section" id="Syntax"><header>Syntax</header>
+    <p>Every line of code that runs in Java must be inside a class. In our example, we named the class MyClass. A class should always start with an uppercase first letter.</p>
+
+    <p>Note: Java is case-sensitive: "MyClass" and "myclass" has different meaning.</p>
+
+<p>The name of the java file must match the class name. When saving the file, save it using the class name and add ".java" to the end of the filename.</p>
+
+<p>MyClass.java</p>
+    <div class="div-code">
+    <pre><code>public class MyClass {
+                    public static void main(String[] args) {
+                        System.out.println(&#x22;Hello World&#x22;);
+                    }
+                }
+    </code></pre>
+    <p>The output should be:</p>
+    <pre><code> Hello World
+    </code></pre>
+    </div>
+    <h3>The main method</h3>
+    <p>The main() method is required and you will see it in every Java program:</p>
+    <pre><code>public static void main(String[] args)</code></pre>
+    <p>Any code inside the main() method will be executed, just remember that every Java program has a class name which must match the filename, and that every program must contain the main() method.</p>
+    
+    <h3>System.out.println()</h3>
+    <p>Inside the main() method, we can use the println() method to print a line of text to the screen:</p>
+    <div class="div-code">
+    <pre><code>public static void main(String[] args) {
+                    System.out.println(&#x22;Hello World&#x22;);
+                }</code></pre>
+    </div>
+    <p>Note: Remember the curly braces {} marks the beginning and the end of a block of code and each code statement must end with a semicolon.</p>
+  </section>
+  
+  <section class="main-section" id="Comments"><header>Comments</header>
+    <p>Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent execution when testing alternative code.</p>
+    <p>
+Single-line comments start with two forward slashes (//). Any text between // and the end of the line is ignored by Java (will not be executed). This example uses a single-line comment before a line of code:</p>
+    <div class="div-code">
+    <pre><code>// This is a comment
+
+System.out.println(&#x22;Hello World&#x22;);</code></pre>
+    </div>
+    <p>This example uses a single-line comment at the end of a line of code:</p>
+    <div class="div-code">
+    <pre><code>System.out.println(&#x22;Hello World&#x22;);
+
+// This is a comment</code></pre>
+    </div>
+    
+    <h3>Multiline Comments:</h3>
+    <p>Multi-line comments start with /* and ends with */. Any text between /* and */ will be ignored by Java. This example uses a multi-line comment (a comment block) to explain the code:</p>
+    <div class="div-code">
+    <pre><code>/* The code below will print the words
+Hello World to the screen, and it is
+amazing */
+
+System.out.println(&#x22;Hello World&#x22;);</code></pre>
+    </div>
+  </section>
+  
+  <section class="main-section" id="Variables"><header>Variables</header>
+    <p>
+A Java variable is a piece of memory that can contain a data value. A variable thus has a data type.</p>
+    <p>Variables are typically used to store information which your Java program needs to do its job. This can be any kind of information ranging from texts, codes (e.g. country codes, currency codes etc.) to numbers, temporary results of multi step calculations etc.</p>
+    <p>In the code example below, the main() method contains the declaration of a single integer variable named number. The value of the integer variable is first set to 10, and then 20 is added to the variable afterwards.</p>
+
+    <div class="div-code">
+    <pre><code>public class MyClass {
+                    public static void main(String[] args) {            
+                        int number = 10;         
+                        number = number + 20;
+                    }               
+                }</code></pre>
+    </div>
+    <h3>Variable Declaration</h3>
+    <p>Exactly how a variable is declared depends on what type of variable it is (non-static, static, local, parameter). In Java you declare a variable like this:</p>
+    <div class="div-code">
+    <pre><code>
+       type name;
+    </code></pre>
+    </div>
+    <p>Instead of the word type, you write the data type of the variable. Similarly, instead of the word name you write the name you want the variable to have.</p>
+    <p>Here are examples of how to declare variables of all the primitive data types in Java:</p>
+    
+    <div class="div-code">
+    <pre><code>
+byte    myByte;
+short   myShort;
+char    myChar;
+int     myInt;
+long    myLong;
+float   myFloat;
+double  myDouble;   
+    </code></pre>
+    </div>
+    <p>Here are examples of how to declare variables of the object types in Java:</p>
+    <div class="div-code">
+    <pre><code>
+byte    myByte;
+short   myShort;
+char    myChar;
+int     myInt;
+long    myLong;
+float   myFloat;
+double  myDouble;   
+    </code></pre>
+    </div>
+    
+    <p>Here are examples of how to declare variables of the object types in Java:</p>
+    
+    <div class="div-code">
+    <pre><code>String myName = "Mario";
+
+System.out.println(myName);</pre></code>
+    </div>
+  </section>
+  
+  <section class="main-section" id="Operators"><header>Operators</header>
+    <p>Java contains a set of built-in math operators for performing simple math operations on Java variables. The Java math operators are reasonably simple. Therefore Java also contains the Java Math class which contains methods for performing more advanced math calculations in Java.</p>
+    
+    <h3>Arithmetic Operators</h3>
+    
+    <table style="width:100%">
+  <caption>Monthly savings</caption>
+  <tr>
+    <th>Name</th>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>Addition</td>
+    <td>+</td>
+    <td>Adds together two values</td>
+    <td>x + y</td>
+  </tr>
+  <tr>
+    <td>Subtraction</td>
+    <td>-</td>
+    <td>Subtracts one value from another</td>
+    <td>x - y</td>
+  </tr>
+      <tr>
+    <td>Multiplication</td>
+    <td>*</td>
+    <td>Multiplies two values</td>
+    <td>x * y</td>
+  </tr>
+      <tr>
+    <td>Division</td>
+    <td>/</td>
+    <td>Divides one value from another</td>
+    <td>x / y</td>
+  </tr>
+      <tr>
+    <td>Modulus</td>
+    <td>%</td>
+    <td>Returns the division remainder</td>
+    <td>x % y</td>
+  </tr>
+      <tr>
+    <td>Increment</td>
+    <td>++</td>
+    <td>Increases the value of a variable by 1</td>
+    <td>++x</td>
+  </tr>
+      <tr>
+    <td>Decrement</td>
+    <td>--</td>
+    <td>Decreases the value of a variable by 1</td>
+    <td>--x</td>
+  </tr>
+</table>
+    <h3>The Java Math Class</h3>
+    <p>The Java Math class provides more advanced mathematical calculations than what the basic Java math operators provide. The Math class contains methods for finding the maximum or minimum of two values, rounding values, logarithmic functions, square root, and trigonometric functions (sin, cos, tan etc.).</p>
+    
+    <h4>Math.abs()</h4>
+    <p>The Math.abs() function returns the absolute value of the parameter passed to it. The absolute value is the positive value of the parameter. If the parameter value is negative, the negative sign is removed and the positive value corresponding to the negative value without sign is returned. Here are two Math.abs() method examples:</p>
+    <div class="div-code">
+    <pre><code>arr = new int[10];</code></pre>
+    </div>
+    
+    <p>This will create a new array with the size of 10. We can check the size by printing the array's length:</p>
+    <div class="div-code">
+    <pre><code>System.out.println(arr.length);</code></pre>
+    </div>
+    
+    <p>We can access the array and set values:</p>
+    <div class="div-code">
+    <pre><code>arr[0] = 4;
+arr[1] = arr[0] + 5;</code></pre>
+    </div>
+    
+    <p>The Math.abs() function returns the absolute value of the parameter passed to it. The absolute value is the positive value of the parameter. If the parameter value is negative, the negative sign is removed and the positive value corresponding to the negative value without sign is returned. Here are two Math.abs() method examples:</p>
+    <div class="div-code">
+    <pre><code>arr = new int[10];</code></pre>
+    </div>
+    
+    <p>Java arrays are 0 based, which means the first element in an array is accessed at index 0 (e.g: arr[0], which accesses the first element). Also, as an example, an array of size 5 will only go up to index 4 due to it being 0 based.</p>
+
+    
+  
+  
+  <section class="main-section" id="References"><header>References</header>
+    <p>
+All the documentation in this page is taken from:</p>
+    <ul>
+      <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+      <li><a href="https://www.oracle.com/">Oracle</a></li>
+      <li><a href="https://www.freejavaguide.com/">Free Java Guide</a></li>
+      <li><a href="https://www.learnjavaonline.org/">Learn Java Online</a></li>
+      <li><a href="http://tutorials.jenkov.com/">Tutorials Jenkov</a></li>
+    </ul>
+      
+  </section>
+    </div>           
+</main>     
+</html>
+             
+            
+  

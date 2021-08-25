@@ -1,0 +1,126 @@
+body{
+  background-color: rgba(0,0,0,0.07);
+  color: rgba(0,0,0,0.8);
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 120;
+}
+
+
+#main-doc{
+  max-width: 1600px;
+  text-align: left;
+  margin: 0px;
+  padding-left: 20em;
+  padding-right: 2em;
+}
+
+p{
+  font-size: 16px;
+}
+
+a{
+ font-size: 18px;
+  color: blue;
+}
+
+a:visited{
+ font-size: 18px;
+  color: blue;
+}
+
+.main-section{
+  padding: 10px;
+}
+
+.main-section header{
+    font-size: 30px;
+ }
+
+#navwrapper #navbar{
+  position: fixed;
+  width: 290px;
+  height: 100%;
+  background: rgba(0,0,0,0.0.5);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media all and (max-width: 600px){
+  #navwrapper{
+}
+  #navwrapper #navbar{
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  border: none;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  max-height: 275px;
+  border-bottom: 2px solid black;
+}
+  #main-doc{
+    position: relative;
+    padding-left: 5%;
+    margin-top: 275px;
+  }
+  
+  div-code{
+    width: 100%;
+    margin: 0 auto;
+  }
+  code{
+    font-size: 10px;
+  }
+}
+
+.link-sec:hover{
+  background-color: rgba(0,0,0,0.1);
+}
+
+#navbar header{
+  color: black;
+  text-align: center;
+  font-size: 28px;
+}
+
+#nav-head{
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+  padding-right: 15px;
+  
+}
+.nav-link{
+  padding: 15px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 4px solid gray;
+  border-top: 1px solid rgba(225,225,225,1);
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-link:visited{
+  color: black;
+}
+
+#intro {
+  font-size: 35px;
+  padding-top: 4%;
+}
+
+.div-code{
+  background-color: rgba(0,0,0,0.9);
+  color: rgba(0,255,0,0.75);
+  padding: 10px;
+  padding-left: 25px;
+}
+
+#References{
+  padding-left: 0px;
+}
